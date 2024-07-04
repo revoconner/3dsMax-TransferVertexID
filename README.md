@@ -7,14 +7,14 @@ This tool lets user choose three corresponding vertices from Source Mesh to Targ
 <img width="500" alt="image" src="https://github.com/revoconner/3dsMax-TransferVertexID/assets/88772846/bfa41c30-3f7c-45e1-8dcb-aa95e4da681d">
 
 
-### What this tool can do:
+## What this tool can do:
 
 * It transfers vertex ID from one mesh to another with the same vertex numbers.
 * It does **not** need the two meshes to share similar form, that means their world space and local space coordinates can be different.
 * It does **not** need the two meshes to share same UV info.
 * It's the first tool made for 3ds Max that can do this.  (There is only one other that uses world space coordinates or UV to transfer the vertex ID by Changsoo Eun. [https://cganimator.com/mcg-reordervertsbyproximity/](https://cganimator.com/mcg-reordervertsbyproximity/))
 
-### How to use:
+## How to use:
 
 1. Install by dragging and dropping the TransferVertexID.mzp file into max viewport. This will create a menu item called RevScript where you can find your tool.
 2. You can also run this by downloading all the files and keeping them in the same folder. Then running TransferVertID.ms from the script editor.
