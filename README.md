@@ -1,6 +1,7 @@
 # 3dsMax-Transfer Vertex ID
 
-A transfer vertex ID tool for 3ds Max where the meshes look different and have different UV.
+A tool that allows users to transfer vertex ID from one mesh to another provided that they share the same topology. This wasn't possible before in 3ds Max. 
+The tool is not limited by different shape of the geometry or by UV of the models.
 
 This tool lets user choose three corresponding vertices from Source Mesh to Target Mesh.
 
