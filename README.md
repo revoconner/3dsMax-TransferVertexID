@@ -16,6 +16,8 @@ This tool lets user choose three corresponding vertices from Source Mesh to Targ
 
 ## How to use:
 
+**Video Tutorial** - https://www.youtube.com/watch?v=Afi4RAibtAE
+
 1. Install by dragging and dropping the TransferVertexID.mzp file into max viewport. This will create a menu item called RevScript where you can find your tool.
 2. You can also run this by downloading all the files and keeping them in the same folder. Then running TransferVertID.ms from the script editor.
 3. Once the dialog box is ready, select a temporary folder. This folder is used to store vertex mapping of the two meshes and other things.
