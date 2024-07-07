@@ -36,4 +36,4 @@ This tool lets user choose three corresponding vertices from Source Mesh to Targ
 * This is my first maxscript so its a bit clunky.
 * This is in alpha state so some faulty results from time to time are expected.
 * It uses python to do some operations in the background however as long as max supports pymxs it should, in theory, work.
-* It's slow but I am working on optimising the algorithm to get the fastest reuslts possible in the next release.
+* It's slow, very slow on large meshes, but I am working on optimising the algorithm to get the fastest reuslts possible in the next release. Expect it soon. 
