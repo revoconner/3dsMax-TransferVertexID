@@ -12,26 +12,26 @@ global targetMeshName = ""
 global sourceProcessed = false
 global targetProcessed = false
 
+--- Faster processing
 fn bfs_vertex_mapping mesh =
 (
     local numVerts = polyOp.getNumVerts mesh
-    local adjacencyList = for i = 1 to numVerts collect #()
+    local adjacencyList = array numVerts
     
-    for vert = 1 to numVerts do
+    for i = 1 to numVerts do adjacencyList[i] = #()
+    
+    local edges = #{1..polyOp.getNumEdges mesh}
+    
+    for edge in edges do
     (
-        local connectedEdges = polyOp.getEdgesUsingVert mesh vert
-        for edge in connectedEdges do
+        local verts = polyOp.getVertsUsingEdge mesh edge
+        if verts.count == 2 then
         (
-            local adjacentVerts = polyOp.getVertsUsingEdge mesh edge
-            for adjVert in adjacentVerts do
-            (
-                if adjVert != vert do
-                (
-                    append adjacencyList[vert] adjVert
-                )
-            )
+            appendIfUnique adjacencyList[verts[1]] verts[2]
+            appendIfUnique adjacencyList[verts[2]] verts[1]
         )
     )
+    
     adjacencyList
 )
 
@@ -388,7 +388,7 @@ rollout VertID "Transfer Vertex ID" width:500 height:700
         label lbl_13 "6. When clicking on process xxxx mesh button, make sure you have the mesh selected" align:#left
         label lbl_14 "7. May not work with meshes that have floating geometry." align:#left
 		label lbl_15 "V: 0.1.a" align:#center
-        HyperLink hyp_1 "Made by Rév" offset:[0,30] align:#center visible:true address:@"https://www.revoconner.com" hoverColor:(color 0 182 255) visitedColor:(color 255 255 255)
+        HyperLink hyp_1 "Made by RÃ©v" offset:[0,30] align:#center visible:true address:@"https://www.revoconner.com" hoverColor:(color 0 182 255) visitedColor:(color 255 255 255)
     )
 )
 
