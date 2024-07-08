@@ -37,3 +37,13 @@ This tool lets user choose three corresponding vertices from Source Mesh to Targ
 * This is in alpha state so some faulty results from time to time are expected.
 * It uses python to do some operations in the background however as long as max supports pymxs it should, in theory, work.
 * It's slow, very slow on large meshes, but I am working on optimising the algorithm to get the fastest reuslts possible in the next release. Expect it soon. 
+
+## Known Bugs
+* recursion limit exceeds for more than 10000 vertices. (Fixed for next release)
+* recursion algorithm is too slow for real world use. (Fixed for next release)
+
+## Roadmap
+* Change UI to adopt new algorithm, iterative method using bit arrays that works on initial mapped faces instead of vertices. [Implemented in next release]
+* Make the algorithm faster. [Implemented in next release]
+* Add another option to transfer VID using UV for meshes with floating geometry but same UV.
+* Remove the need for temporary folder to be selected by the user.
